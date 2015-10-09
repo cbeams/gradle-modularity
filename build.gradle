@@ -9,6 +9,10 @@ model {
             sources {
                 java {
                     source.srcDir 'src/foo/java'
+
+                    dependencies {
+                        library 'bar'
+                    }
                 }
             }
         }
