@@ -12,6 +12,8 @@ model {
                     source.srcDir 'src/bar/java'
                 }
             }
+            targetPlatform 'java7'
+            targetPlatform 'java8'
         }
     }
 }
