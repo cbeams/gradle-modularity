@@ -11,20 +11,10 @@ model {
                     source.srcDir 'src/foo/java'
 
                     dependencies {
-                        library 'bar'
+                        project ':bar' library 'bar'
                     }
-                }
-            }
-        }
-        bar(JvmLibrarySpec) {
-            sources {
-                java {
-                    source.srcDir 'src/bar/java'
                 }
             }
         }
     }
 }
-
-apply from: 'jdk.gradle'
-
