@@ -12,6 +12,9 @@ model {
                     source.srcDir 'src/bar/java'
                 }
             }
+            api {
+                exports 'com.example.bar'
+            }
             targetPlatform 'java6'
             targetPlatform 'java7'
         }
