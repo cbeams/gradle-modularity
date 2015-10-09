@@ -12,6 +12,13 @@ model {
                 }
             }
         }
+        bar(JvmLibrarySpec) {
+            sources {
+                java {
+                    source.srcDir 'src/bar/java'
+                }
+            }
+        }
     }
 }
 
