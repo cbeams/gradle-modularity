@@ -17,30 +17,35 @@ The commits in this repository represent a series of steps in a live (or recorde
 
 To view all the steps and their changes in order, clone the repository locally run the following command:
 
-    git log -p --reverse step1^..step12
+    git log -p --reverse step1^..step19
 
 
 ## View and execute each step in order
 
 To walk through and execute each step, first do the following:
 
-    git config alias.steps 'log --reverse --oneline --decorate step1^..step12'
+    git config alias.steps 'log --reverse --oneline --decorate step1^..step19'
 
 This makes available the convenient alias `git steps`, which can now be run to display the steps in order:
 
     $ git steps
-    3d9fe7b (tag: step1) Add a Java library named foo
-    c3241a6 (tag: step2) Add a Java library named bar
-    ab5ba99 (tag: step3) Break the build by referencing bar from foo
-    a97717e (tag: step4) Fix the build by declaring foo depends on bar
-    fae6108 (tag: step5) Refactor foo and bar libs as Gradle submodules
-    e11e4ec (tag: step6) Generate Java 7 and 8 binaries for both libraries
-    89abd14 (tag: step7) Break the build by targeting Java 6 for foo only
-    3555473 (tag: step8) Fix the build by targeting Java 6 for bar as well
-    a46f226 (tag: step9) Add a class intended for internal use only by bar
-    7d8e9b1 (tag: step10) Reference bar internals from foo (w/out breakage)
-    a00c5d3 (tag: step11) Break the build by declaring bar's public API
-    ae66547 (tag: step12) Fix the build by removing reference to bar internals
+      5e5cd5a (tag: step1) Add a Java library named foo
+      df5fb21 (tag: step2) Add a Java library named bar
+      d6a1b8a (tag: step3) Break the build by referencing bar from foo
+      d7e661c (tag: step4) Fix the build by declaring foo depends on bar
+      eea5335 (tag: step5) Refactor foo and bar libs as Gradle submodules
+      2be3082 (tag: step6) Generate Java 7 and 8 binaries for both libraries
+      75311a8 (tag: step7) Break the build by targeting Java 6 for foo only
+      2a9e82b (tag: step8) Fix the build by targeting Java 6 for bar as well
+      b9ec784 (tag: step9) Show backwards compatibility by removing the Java 8 from Bar and Build Java 8 for Foo.
+      36196c8 (tag: step10) Add a class intended for internal use only by bar
+      b75d6d5 (tag: step11) Reference bar internals from foo (w/out breakage)
+      d1a3fc9 (tag: step12) Break the build by declaring bar's public API
+      b72e1dc (tag: step13) Fix the build by removing reference to bar internals
+      5e5d9ee (tag: step14) Add external dependencies to Bar
+      2cecc9b (tag: step15) Run the build with a modified Foo reaching out to a dependency of Bar and see a compile failure
+      e21c33a (tag: step16) Update Bar so that the API dependency is exported and see a successful build
+
 
 ### Check out a step
 
