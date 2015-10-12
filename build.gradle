@@ -1,0 +1,19 @@
+plugins {
+    id 'jvm-component'
+    id 'java-lang'
+}
+
+model {
+    components {
+        foo(JvmLibrarySpec) {
+            sources {
+                java {
+                    source.srcDir 'src/foo/java'
+                }
+            }
+        }
+    }
+}
+
+apply from: 'jdk.gradle'
+
