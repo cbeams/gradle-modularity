@@ -15,7 +15,7 @@ model {
                 java {
                     source.srcDir 'src/bar/java'
 		    dependencies {
-		       library 'com.google.guava:guava:18.0'
+		       library 'com.google.guava:guava:18.0' exported(true)
 		    }
                 }
             }
