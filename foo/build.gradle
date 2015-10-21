@@ -3,6 +3,10 @@ plugins {
     id 'java-lang'
 }
 
+repositories {
+   jcenter()
+}
+
 model {
     components {
         foo(JvmLibrarySpec) {
