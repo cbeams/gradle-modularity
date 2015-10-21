@@ -4,12 +4,19 @@ plugins {
     id 'java-lang'
 }
 
+repositories {
+   jcenter()
+}
+
 model {
     components {
         bar(JvmLibrarySpec) {
             sources {
                 java {
                     source.srcDir 'src/bar/java'
+		    dependencies {
+		       library 'com.google.guava:guava:18.0'
+		    }
                 }
             }
             api {
